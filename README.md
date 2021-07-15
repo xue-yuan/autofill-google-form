@@ -1,5 +1,9 @@
 # autofill-google-form
 
+## Installation
+1. `pip install -r requirements.txt`
+2. `cp autofill.json.sample autofill.json`
+
 ## Usage
 
 1. Fill out `autofill.json`
