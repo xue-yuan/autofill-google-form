@@ -61,7 +61,7 @@ class Form:
             self.data[f'entry.{ID}'] = response
 
     def send(self):
-        self.Console.log('Start to autofilling...')
+        self.Console.log('Start autofilling...')
 
         request = requests.post(
             url = self.formResponseURL,
