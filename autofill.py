@@ -6,7 +6,6 @@ import requests
 from bs4 import BeautifulSoup
 
 class Form:
-
     class Console:
         @staticmethod
         def log(text):
@@ -68,16 +67,18 @@ class Form:
             data = self.data,
             headers = self.headers
         )
-        
-        if request.status_code == 200: self.Console.success('Success!')
-        else: self.Console.error('Failed!')
+
+        if request.status_code == 200:
+            self.Console.success('Success!')
+        else:
+            self.Console.error('Failed!')
 
     def inspector(self, symbol):
         INFO_URL = f'URL:\n{self.viewFormURL}\n{self.formResponseURL}\n'
         INFO_HEADERS = f'HEADERS:\n{self.headers}\n'
         INFO_DATA = f'DATA:\n{self.data}\n'
 
-        if (symbol == 'all'): 
+        if (symbol == 'all'):
             self.Console.info(f'{INFO_URL}\n')
             self.Console.info(f'{INFO_HEADERS}\n')
             self.Console.info(f'{INFO_DATA}\n')
@@ -89,6 +90,5 @@ class Form:
 if __name__ == '__main__':
     with open('autofill.json', 'r') as f:
         config = json.load(f)
-    
-    form = Form(config)
-    form.send()
+        form = Form(config)
+        form.send()
