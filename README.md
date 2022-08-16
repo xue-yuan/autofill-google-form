@@ -1,20 +1,17 @@
 # autofill-google-form
 
-## 2022-04-13 Update
-
-Google has modified the dom elements and request format, this script is no longer available.
-
 ## Installation
 
 1. `pip install -r requirements.txt`
-2. `cp autofill.json.sample autofill.json`
+2. `cp form.json.sample form.json`
 
 ## Usage
 
-1. Fill out `autofill.json`
-   - `form-url`: Form's URL which is ends with **`viewform`**.
-   - `response`: Each element corresponds to the response to each question
-2. Here's the supported type of question
+1. Fill out `form.json`
+   - `form_url`: Form's URL which is ends with **`viewform`**.
+   - `answers`: Each element corresponds to the answer to each question.
+2. Run `python3 main.py`
+3. Here's the supported type of answer
    - `Short Answer`: [string]
    - `Paragraph`: [string]
    - `Dropdown`: [string], option's text
