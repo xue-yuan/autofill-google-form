@@ -1,6 +1,6 @@
 import json
 
-from form import GoogleForm
+from phorm import GoogleForm
 
 if __name__ == '__main__':
     with open('form.json', 'r') as f:
